@@ -28,7 +28,7 @@ var shop = [
       title: 'Scottish Fold',
       image: 'https://th.bing.com/th?id=OSK.HEROKkreNEV0VAq7jL-ycjjPLfQZoe0ZFRzJDF8kY1ApicM&w=384&h=228&c=13&rs=2&o=6&oif=webp&pid=SANGAM',
       price: '$500-$2,000', 
-    },
+    }
     
   
     
@@ -65,9 +65,9 @@ var shop = [
   
   
     for (var i=0; i < shop.length; i++){
-        var heading = '<div class="product ' + '"><span><h5>' + shop[i].title + '</h5>'
-        var image = '<img src="' + shop[i].image + '"/'
-        var price = '<p> $' + shop[i].price + '</p></span>'
+        var heading = '<div class="product card col-md-3 mx-3 my-3 ' + '"><span><h5 class="card-title">' + shop[i].title + '</h5>'
+        var image = '<img src="' + shop[i].image + '"class="card-img justify-content-center"/>'
+        var price = '<p class="container card-body"> $' + shop[i].price + '</p></span><button class="btn btn-primary my-2">add to cart</button></div>'
         var concatThis = heading + image + price;
         postHTML = postHTML + concatThis
     }
